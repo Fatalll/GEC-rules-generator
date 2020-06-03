@@ -1,0 +1,177 @@
+[
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "JJ"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        },
+        {
+         "type": "LEMMA",
+         "regexString": "\\Qmuch\\E"
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "POS",
+       "tags": [
+        "NNS"
+       ]
+      }
+     },
+     {
+      "offset": 2,
+      "condition": {
+       "type": "CHUNK_POS",
+       "chunkPositions": [
+        "BEGIN"
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "many",
+         "lemma": "many",
+         "pos": "JJ",
+         "chunkTag": "NP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "amod",
+         "relationIndex": 11
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": [
+       {
+        "type": "DELETE",
+        "required": true
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 4.0920982E-5,
+   "dirty": 0.017026106
+  },
+  "origin": {
+   "block": 2114,
+   "position": 240,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 708,
+    "position": 58,
+    "error": 0
+   },
+   {
+    "block": 2129,
+    "position": 114,
+    "error": 0
+   },
+   {
+    "block": 1751,
+    "position": 95,
+    "error": 0
+   },
+   {
+    "block": 1848,
+    "position": 95,
+    "error": 0
+   },
+   {
+    "block": 543,
+    "position": 59,
+    "error": 0
+   },
+   {
+    "block": 15,
+    "position": 8,
+    "error": 0
+   },
+   {
+    "block": 2114,
+    "position": 240,
+    "error": 0
+   },
+   {
+    "block": 817,
+    "position": 53,
+    "error": 0
+   },
+   {
+    "block": 1201,
+    "position": 80,
+    "error": 0
+   },
+   {
+    "block": 2857,
+    "position": 89,
+    "error": 0
+   },
+   {
+    "block": 16,
+    "position": 148,
+    "error": 0
+   },
+   {
+    "block": 81,
+    "position": 21,
+    "error": 0
+   },
+   {
+    "block": 1879,
+    "position": 114,
+    "error": 0
+   },
+   {
+    "block": 990,
+    "position": 302,
+    "error": 0
+   }
+  ],
+  "FP": [
+   {
+    "block": 1116,
+    "position": 3,
+    "error": 0
+   }
+  ],
+  "fn": 868
+ }
+]

@@ -1,0 +1,955 @@
+[
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": -1,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "JJ"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "LEMMA",
+         "regexString": "\\Qable\\E"
+        }
+       ]
+      }
+     },
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "SENT_POS",
+       "positions": [
+        "SENT_MIDDLE"
+       ]
+      }
+     },
+     {
+      "offset": 2,
+      "condition": {
+       "type": "SENT_POS",
+       "positions": [
+        "SENT_MIDDLE"
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "PP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "xcomp",
+         "relationIndex": 10
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 4.0745555E-5,
+   "dirty": 0.030303031
+  },
+  "origin": {
+   "block": 2549,
+   "position": 114,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 190,
+    "position": 187,
+    "error": 0
+   },
+   {
+    "block": 2455,
+    "position": 166,
+    "error": 0
+   },
+   {
+    "block": 2305,
+    "position": 266,
+    "error": 0
+   },
+   {
+    "block": 2549,
+    "position": 114,
+    "error": 0
+   },
+   {
+    "block": 904,
+    "position": 65,
+    "error": 0
+   },
+   {
+    "block": 1253,
+    "position": 119,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 192
+ },
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": -1,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "JJ"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "VBP"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "SENT_POS",
+       "positions": [
+        "SENT_MIDDLE"
+       ]
+      }
+     },
+     {
+      "offset": -3,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "VP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": -2,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "VP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "mark",
+         "relationIndex": 5
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 3.4504718E-4,
+   "dirty": 0.04040404
+  },
+  "origin": {
+   "block": 1468,
+   "position": 139,
+   "error": 1
+  },
+  "TP": [
+   {
+    "block": 518,
+    "position": 161,
+    "error": 0
+   },
+   {
+    "block": 877,
+    "position": 62,
+    "error": 0
+   },
+   {
+    "block": 1468,
+    "position": 139,
+    "error": 1
+   },
+   {
+    "block": 1468,
+    "position": 48,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 194
+ },
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": -1,
+      "condition": {
+       "type": "CHUNK_TAG",
+       "chunks": [
+        "NP"
+       ]
+      }
+     },
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "VB"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "VP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "RELATION",
+         "relations": [
+          "det"
+         ]
+        },
+        {
+         "type": "POS",
+         "tags": [
+          "DT"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 2,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "RELATION",
+         "relations": [
+          "amod"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "MIDDLE"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 3,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "RELATION",
+         "relations": [
+          "ccomp"
+         ]
+        },
+        {
+         "type": "POS",
+         "tags": [
+          "NN"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "END"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "VP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "mark",
+         "relationIndex": 17
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 4.6509816E-4,
+   "dirty": 0.05050505
+  },
+  "origin": {
+   "block": 1119,
+   "position": 102,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 996,
+    "position": 56,
+    "error": 0
+   },
+   {
+    "block": 1392,
+    "position": 36,
+    "error": 0
+   },
+   {
+    "block": 1119,
+    "position": 102,
+    "error": 0
+   },
+   {
+    "block": 2592,
+    "position": 675,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 194
+ },
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": -1,
+      "condition": {
+       "type": "CHUNK_TAG",
+       "chunks": [
+        "NP"
+       ]
+      }
+     },
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "VB"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "VP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "LEMMA",
+         "regexString": "\\Qgo\\E"
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": -2,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 2,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "RELATION",
+         "relations": [
+          "det"
+         ]
+        },
+        {
+         "type": "POS",
+         "tags": [
+          "DT"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "VP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "mark",
+         "relationIndex": 6
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 6.0408493E-5,
+   "dirty": 0.035353534
+  },
+  "origin": {
+   "block": 1230,
+   "position": 46,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 1230,
+    "position": 46,
+    "error": 0
+   },
+   {
+    "block": 1810,
+    "position": 84,
+    "error": 0
+   },
+   {
+    "block": 1938,
+    "position": 50,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 195
+ },
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": -1,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "VBD"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": 0,
+      "condition": {
+       "type": "POS",
+       "tags": [
+        "VB"
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "SENT_POS",
+       "positions": [
+        "SENT_MIDDLE"
+       ]
+      }
+     },
+     {
+      "offset": -3,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_START"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": -2,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "PRP"
+         ]
+        },
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "SENT_POS",
+         "positions": [
+          "SENT_MIDDLE"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "VP",
+         "chunkPos": "MIDDLE",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "mark",
+         "relationIndex": 5
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 5.581178E-4,
+   "dirty": 0.035353534
+  },
+  "origin": {
+   "block": 596,
+   "position": 65,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 2888,
+    "position": 219,
+    "error": 0
+   },
+   {
+    "block": 596,
+    "position": 65,
+    "error": 0
+   },
+   {
+    "block": 1203,
+    "position": 279,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 195
+ },
+ {
+  "rule": {
+   "detector": {
+    "conditions": [
+     {
+      "offset": 0,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "POS",
+         "tags": [
+          "VB"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        },
+        {
+         "type": "LEMMA",
+         "regexString": "\\Qbe\\E"
+        }
+       ]
+      }
+     },
+     {
+      "offset": 1,
+      "condition": {
+       "type": "CHUNK_TAG",
+       "chunks": [
+        "NP"
+       ]
+      }
+     },
+     {
+      "offset": -3,
+      "condition": {
+       "type": "AND",
+       "conditions": [
+        {
+         "type": "CHUNK_TAG",
+         "chunks": [
+          "NP"
+         ]
+        },
+        {
+         "type": "CHUNK_POS",
+         "chunkPositions": [
+          "BEGIN"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "offset": -2,
+      "condition": {
+       "type": "CHUNK_POS",
+       "chunkPositions": [
+        "BEGIN"
+       ]
+      }
+     }
+    ]
+   },
+   "redactor": {
+    "modifications": [
+     {
+      "offset": 0,
+      "insertions": [
+       {
+        "type": "INSERT",
+        "new": {
+         "text": "to",
+         "lemma": "to",
+         "pos": "TO",
+         "chunkTag": "VP",
+         "chunkPos": "BEGIN",
+         "sentPos": "SENT_MIDDLE",
+         "relation": "mark",
+         "relationIndex": 4
+        },
+        "required": true
+       }
+      ],
+      "replacements": [],
+      "deletions": []
+     }
+    ]
+   }
+  },
+  "info": {
+   "pure": 0.0054966854,
+   "dirty": 0.035353534
+  },
+  "origin": {
+   "block": 1010,
+   "position": 22,
+   "error": 0
+  },
+  "TP": [
+   {
+    "block": 996,
+    "position": 56,
+    "error": 0
+   },
+   {
+    "block": 1010,
+    "position": 22,
+    "error": 0
+   },
+   {
+    "block": 1663,
+    "position": 111,
+    "error": 0
+   },
+   {
+    "block": 2592,
+    "position": 675,
+    "error": 0
+   }
+  ],
+  "FP": [],
+  "fn": 194
+ }
+]
